@@ -37,7 +37,7 @@ public class DetailActivity extends AppCompatActivity {
         Intent intentThatStartedThisActivity = getIntent();
         if (intentThatStartedThisActivity.hasExtra("original_title")) {
 
-            String thumbnail = getIntent().getExtras().getString("poster_path");
+            String thumbnail = "https://image.tmdb.org/t/p/w500" + getIntent().getExtras().getString("poster_path");
             String movieName = getIntent().getExtras().getString("original_title");
             String synopsis = getIntent().getExtras().getString("overview");
             String rating = getIntent().getExtras().getString("vote_average");
